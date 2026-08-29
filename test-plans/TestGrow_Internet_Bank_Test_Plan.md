@@ -11,7 +11,7 @@
 
 ## 3. Документация
 
-- ТЗ: `requirements/ibrequirements.docx`
+- ТЗ: `requirements/ibrequirements.md` (оригинал: `ibrequirements.docx`)
 - Тестовые данные: Google Sheets (15 клиентов, 121 счёт)
 
 ## 4. Стратегия

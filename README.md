@@ -12,27 +12,30 @@
 
 ## Как смотреть репозиторий
 
-| Раздел | Что внутри |
-|---|---|
-| [test-plans/](test-plans/) | Тест-план |
-| [test-cases/](test-cases/) | Тест-кейсы по модулям (38 шт.) |
-| [test-data/clients.md](test-data/clients.md) | 15 клиентов, 121 счёт |
-| [bug-reports/](bug-reports/) | Шаблон баг-репорта и чек-лист |
-| [test-runs/](test-runs/) | Результаты прогонов (pass/fail) |
-| [screenshots/](screenshots/) | Скриншоты симулятора и дефектов |
 
----
+| Раздел                                                           | Что внутри                      |
+| ---------------------------------------------------------------- | ------------------------------- |
+| [requirements/ibrequirements.md](requirements/ibrequirements.md) | ТЗ (REQ01–REQ26)                |
+| [test-plans/](test-plans/)                                       | Тест-план                       |
+| [test-cases/](test-cases/)                                       | Тест-кейсы по модулям (38 шт.)  |
+| [test-data/clients.md](test-data/clients.md)                     | 15 клиентов, 121 счёт           |
+| [bug-reports/](bug-reports/)                                     | Баг- репорты                    |
+| [test-runs/](test-runs/)                                         | Результаты прогонов (pass/fail) |
+| [screenshots/](screenshots/)                                     | Скриншоты симулятора и дефектов |
+
 
 ## Тест-кейсы по модулям
 
-| Файл | Модуль | Кейсов |
-|---|---|---|
-| [01-authorization.md](test-cases/01-authorization.md) | Авторизация | 1 |
-| [02-menu.md](test-cases/02-menu.md) | Главное меню | 3 |
-| [03-accounts-list.md](test-cases/03-accounts-list.md) | Список счетов | 5 |
-| [04-account-details.md](test-cases/04-account-details.md) | Детали счета | 3 |
-| [05-transfer.md](test-cases/05-transfer.md) | Перевод между счетами | 25 |
-| [06-regression.md](test-cases/06-regression.md) | Регресс | 1 |
+
+| Файл                                                      | Модуль                | Кейсов |
+| --------------------------------------------------------- | --------------------- | ------ |
+| [01-authorization.md](test-cases/01-authorization.md)     | Авторизация           | 1      |
+| [02-menu.md](test-cases/02-menu.md)                       | Главное меню          | 3      |
+| [03-accounts-list.md](test-cases/03-accounts-list.md)     | Список счетов         | 5      |
+| [04-account-details.md](test-cases/04-account-details.md) | Детали счета          | 3      |
+| [05-transfer.md](test-cases/05-transfer.md)               | Перевод между счетами | 25     |
+| [06-regression.md](test-cases/06-regression.md)           | Регресс               | 1      |
+
 
 ---
 
@@ -54,30 +57,17 @@
 
 ---
 
-## Как работать с портфолио
-
-**Первый раз (Windows):** [SETUP-DESKTOP.md](SETUP-DESKTOP.md)
-
-1. Открой нужный файл в [test-cases/](test-cases/).
-2. Выполни кейсы в симуляторе TestGrow (practice99).
-3. Зафиксируй результаты в [test-runs/](test-runs/) (Pass / Fail / Blocked).
-4. Найденные баги — в BugTracker TestGrow и в [bug-reports/](bug-reports/) по шаблону.
-5. Скриншоты дефектов — в [screenshots/](screenshots/).
-6. Отправь задание на проверку в TestGrow.
-
----
-
 ## Окружение
 
 - Браузер: Google Chrome (актуальная версия)
 - Платформа: TestGrow practice99
-- ТЗ: `requirements/ibrequirements.docx`
+- ТЗ: [requirements/ibrequirements.md](requirements/ibrequirements.md) ([оригинал .docx](requirements/ibrequirements.docx))
 
 ---
 
 ## Repository
 
-https://github.com/byTekhno/testgrow-internet-bank-qa
+[https://github.com/byTekhno/testgrow-internet-bank-qa](https://github.com/byTekhno/testgrow-internet-bank-qa)
 
 ---
 

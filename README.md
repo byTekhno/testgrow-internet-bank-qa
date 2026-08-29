@@ -53,7 +53,13 @@
 
 [Google Sheets — 15 тестовых клиентов](https://docs.google.com/spreadsheets/d/1IUVQV2zzd8spITAgIt0Hfpn0QZOpvq8Ii1rJiAS-sAA/edit?gid=1977293877#gid=1977293877)
 
+## Repository
+
+https://github.com/byTekhno/testgrow-internet-bank-qa
+
 ## How to Use This Portfolio
+
+**Первый раз:** открой [SETUP-DESKTOP.md](SETUP-DESKTOP.md) — перенос папки на `~/Desktop` и открытие в Cursor.
 
 1. Открой `test-cases/TestGrow_Internet_Bank_Test_Cases.csv` в Excel или Google Sheets.
 2. Выполни кейсы в симуляторе TestGrow (practice99).

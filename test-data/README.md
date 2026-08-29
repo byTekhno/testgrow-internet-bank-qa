@@ -1,13 +1,14 @@
 # Тестовые данные — TestGrow Internet Bank
 
-Источник: [Google Sheets — тестовые клиенты](https://docs.google.com/spreadsheets/d/1IUVQV2zzd8spITAgIt0Hfpn0QZOpvq8Ii1rJiAS-sAA/edit?gid=1977293877#gid=1977293877)
-
 ## Файлы
 
 | Файл | Описание |
 |------|----------|
-| `raw.csv` | Оригинальная выгрузка из Google Sheets |
-| `clients.json` | Структурированные данные: 15 клиентов, 121 счёт |
+| [clients.md](clients.md) | 15 клиентов, 121 счёт — таблицы для сверки с симулятором |
+
+## Онлайн-источник
+
+[Google Sheets — тестовые клиенты](https://docs.google.com/spreadsheets/d/1IUVQV2zzd8spITAgIt0Hfpn0QZOpvq8Ii1rJiAS-sAA/edit?gid=1977293877#gid=1977293877)
 
 ## Клиенты для ключевых сценариев
 
@@ -25,4 +26,4 @@
 
 ## Использование
 
-Сравни отображаемые в симуляторе данные (тип, номер, остаток, валюта, ФИО/Beneficiary) с этой таблицей при выполнении тест-кейсов.
+Сравни отображаемые в симуляторе данные (тип, номер, остаток, валюта, ФИО/Beneficiary) с [clients.md](clients.md) при выполнении тест-кейсов.

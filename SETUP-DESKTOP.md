@@ -71,7 +71,8 @@ GitHub → Settings → Developer settings → Personal access tokens
 
 | Действие | Файл |
 |----------|------|
-| Тест-кейсы в Excel | `test-cases\TestGrow_Internet_Bank_Test_Cases.csv` |
+| Тест-кейсы | `test-cases\01-authorization.md` … `06-regression.md` |
+| Тестовые данные | `test-data\clients.md` |
 | Тест-план | `test-plans\TestGrow_Internet_Bank_Test_Plan.md` |
 | Шаблон бага | `bug-reports\bug-report-template.md` |
 | ТЗ | `requirements\ibrequirements.docx` |

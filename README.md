@@ -1,21 +1,42 @@
-# QA Manual Testing Portfolio — TestGrow Internet Bank
+# QA-портфолио: TestGrow Internet Bank
 
-## Project Overview
+Учебный проект ручного тестирования модуля **«Интернет Банк»** ({TEST}GROW BANK) на платформе [TestGrow](https://testgrow.ru) — задание **practice99**.
 
-Ручное тестирование модуля **«Интернет Банк»** ({TEST}GROW BANK) по заданию **practice99** платформы [TestGrow](https://testgrow.ru).
+Цель репозитория — показать, как я проектирую тесты, прогоняю проверки и оформляю дефекты. Формат артефактов — как в [saucedemo-qa](https://github.com/byTekhno/saucedemo-qa): всё в Markdown.
 
-Раздел курса: **«Написание тестов»**. Фокус — модуль перевода между счетами клиента, список счетов, детали счета и реквизиты.
+**Объект тестирования:** симулятор {TEST}GROW BANK (TestGrow practice99)  
+**Тип:** веб-приложение (интернет-банк)  
+**Уровень:** Junior QA, ручное функциональное тестирование
 
-## Application Under Test
+---
 
-| | |
+## Как смотреть репозиторий
+
+| Раздел | Что внутри |
 |---|---|
-| **Application** | {TEST}GROW BANK (симулятор TestGrow) |
-| **Platform** | TestGrow — practice99 |
-| **Type** | Demo internet banking web application |
-| **Documentation** | `requirements/ibrequirements.docx` |
+| [test-plans/](test-plans/) | Тест-план |
+| [test-cases/](test-cases/) | Тест-кейсы по модулям (38 шт.) |
+| [test-data/clients.md](test-data/clients.md) | 15 клиентов, 121 счёт |
+| [bug-reports/](bug-reports/) | Шаблон баг-репорта и чек-лист |
+| [test-runs/](test-runs/) | Результаты прогонов (pass/fail) |
+| [screenshots/](screenshots/) | Скриншоты симулятора и дефектов |
 
-## Testing Scope
+---
+
+## Тест-кейсы по модулям
+
+| Файл | Модуль | Кейсов |
+|---|---|---|
+| [01-authorization.md](test-cases/01-authorization.md) | Авторизация | 1 |
+| [02-menu.md](test-cases/02-menu.md) | Главное меню | 3 |
+| [03-accounts-list.md](test-cases/03-accounts-list.md) | Список счетов | 5 |
+| [04-account-details.md](test-cases/04-account-details.md) | Детали счета | 3 |
+| [05-transfer.md](test-cases/05-transfer.md) | Перевод между счетами | 25 |
+| [06-regression.md](test-cases/06-regression.md) | Регресс | 1 |
+
+---
+
+## Область тестирования
 
 - Авторизация (выбор тестового пользователя)
 - Главное меню и навигация
@@ -24,56 +45,42 @@
 - Перевод между счетами клиента (лимиты, валидации, сообщения)
 - Регистрация дефектов в BugTracker TestGrow
 
-## Project Structure
+---
 
-```
-├── test-plans/          # Тест-планы
-├── test-cases/           # Тест-кейсы (CSV для Excel)
-├── bug-reports/          # Баг-репорты и чек-лист
-├── screenshots/          # Скриншоты симулятора и дефектов
-├── test-data/            # Тестовые клиенты и счета
-├── requirements/         # Техническое задание
-├── SETUP-DESKTOP.md      # Как склонировать папку на Desktop
-└── README.md
-```
+## Тестовые данные
 
-## Artifacts
+Основной файл: [test-data/clients.md](test-data/clients.md)  
+Онлайн-источник: [Google Sheets — 15 тестовых клиентов](https://docs.google.com/spreadsheets/d/1IUVQV2zzd8spITAgIt0Hfpn0QZOpvq8Ii1rJiAS-sAA/edit?gid=1977293877#gid=1977293877)
 
-| Артефакт | Путь |
-|----------|------|
-| Тест-план | [test-plans/TestGrow_Internet_Bank_Test_Plan.md](test-plans/TestGrow_Internet_Bank_Test_Plan.md) |
-| Тест-кейсы (38) | [test-cases/TestGrow_Internet_Bank_Test_Cases.csv](test-cases/TestGrow_Internet_Bank_Test_Cases.csv) |
-| Шаблон баг-репорта | [bug-reports/bug-report-template.md](bug-reports/bug-report-template.md) |
-| Чек-лист дефектов | [bug-reports/bug-checklist.md](bug-reports/bug-checklist.md) |
-| Тестовые данные | [test-data/](test-data/) |
-| ТЗ | [requirements/ibrequirements.docx](requirements/ibrequirements.docx) |
-| Скриншоты | [screenshots/](screenshots/) |
+---
 
-## Test Data (online)
+## Как работать с портфолио
 
-[Google Sheets — 15 тестовых клиентов](https://docs.google.com/spreadsheets/d/1IUVQV2zzd8spITAgIt0Hfpn0QZOpvq8Ii1rJiAS-sAA/edit?gid=1977293877#gid=1977293877)
+**Первый раз (Windows):** [SETUP-DESKTOP.md](SETUP-DESKTOP.md)
+
+1. Открой нужный файл в [test-cases/](test-cases/).
+2. Выполни кейсы в симуляторе TestGrow (practice99).
+3. Зафиксируй результаты в [test-runs/](test-runs/) (Pass / Fail / Blocked).
+4. Найденные баги — в BugTracker TestGrow и в [bug-reports/](bug-reports/) по шаблону.
+5. Скриншоты дефектов — в [screenshots/](screenshots/).
+6. Отправь задание на проверку в TestGrow.
+
+---
+
+## Окружение
+
+- Браузер: Google Chrome (актуальная версия)
+- Платформа: TestGrow practice99
+- ТЗ: `requirements/ibrequirements.docx`
+
+---
 
 ## Repository
 
 https://github.com/byTekhno/testgrow-internet-bank-qa
 
-## How to Use This Portfolio
+---
 
-**Первый раз (Windows):** открой [SETUP-DESKTOP.md](SETUP-DESKTOP.md) — папка на `Desktop` и открытие в Cursor.
-
-1. Открой `test-cases/TestGrow_Internet_Bank_Test_Cases.csv` в Excel или Google Sheets.
-2. Выполни кейсы в симуляторе TestGrow (practice99).
-3. Заполни колонки **Actual Result** и **Pass/Fail**.
-4. Найденные баги — в BugTracker TestGrow и в `bug-reports/` (по шаблону).
-5. Скриншоты дефектов — в `screenshots/`.
-6. Отправь задание на проверку в TestGrow.
-
-## Tools
-
-- TestGrow BugTracker (встроенный)
-- Google Sheets / Excel (тест-кейсы и тестовые данные)
-- Chrome
-
-## Author
+## Автор
 
 Andrew Hitch — QA portfolio project (TestGrow practice99)

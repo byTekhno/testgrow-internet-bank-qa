@@ -1,107 +1,84 @@
-# Как открыить проект на рабочем столе (как Sauce Demo)
+# Настройка на рабочем столе
 
-Cloud Agent работает в облаке (`/workspace`). На твой Mac/PC файлы **не попадают автоматически** — нужно один раз склонировать репозиторий на Desktop и открыть папку в Cursor.
+Репозиторий на GitHub: **https://github.com/byTekhno/testgrow-internet-bank-qa**
 
-## Шаг 1 — Создай репозиторий на GitHub
-
-Выбери один вариант:
-
-### A) Через Cursor (проще)
-
-В интерфейсе этого агента нажми **Create repo** и задай имя, например:
-
-`testgrow-internet-bank-qa`
-
-### B) Вручную на GitHub
-
-1. Открой https://github.com/new
-2. Repository name: `testgrow-internet-bank-qa`
-3. Public, **без** README (репозиторий пустой)
-4. Create repository
-
-Если создал вручную — напиши агенту «запушь в github.com/andrew-hitch/testgrow-internet-bank-qa», он добавит remote и отправит код.
+Код проекта собран в Cloud Agent. Перенеси его в свой GitHub **один раз** с Mac — дальше работай как с Sauce Demo.
 
 ---
 
-## Шаг 2 — Склонируй на рабочий стол
+## Вариант A — рекомендуется (2 минуты)
 
-На **Mac** в Terminal:
+Открой **Terminal** на Mac и выполни:
 
 ```bash
 cd ~/Desktop
-git clone https://github.com/andrew-hitch/testgrow-internet-bank-qa.git
+git clone https://origin.cursor.com/git/andrew-hitch/tmp-1b2f381a38a340bc.git testgrow-internet-bank-qa
+cd testgrow-internet-bank-qa
+git remote set-url origin https://github.com/byTekhno/testgrow-internet-bank-qa.git
+git push -u origin main
 ```
 
-Папка появится здесь:
+Если `git push` попросит логин — используй **GitHub Personal Access Token** как пароль (не обычный пароль GitHub).
+
+Папка на Desktop:
 
 ```
 ~/Desktop/testgrow-internet-bank-qa/
 ```
 
-Если хочешь имя как у Sauce Demo (с пробелами/другим названием):
+### Открыть в Cursor
+
+1. **File → Open Folder…**
+2. Выбери `Desktop/testgrow-internet-bank-qa`
+
+В Explorer слева:
+
+```
+test-plans/
+test-cases/
+bug-reports/
+screenshots/
+test-data/
+requirements/
+```
+
+---
+
+## Вариант B — если вариант A не клонирует Cursor Origin
 
 ```bash
 cd ~/Desktop
-git clone https://github.com/andrew-hitch/testgrow-internet-bank-qa.git "TestGrow Internet Bank QA"
+git clone https://github.com/byTekhno/testgrow-internet-bank-qa.git
+cd testgrow-internet-bank-qa
 ```
+
+Скачай архив с файлами из агента Cursor (если доступен в UI) или попроси агента снова — после пуша с твоей машины репозиторий будет полный.
+
+Либо вручную скопируй структуру из GitHub после успешного `git push` из варианта A.
 
 ---
 
-## Шаг 3 — Открой в Cursor (навигация по файлам)
+## Вариант C — GitHub Desktop
 
-1. Cursor → **File → Open Folder…**
-2. Выбери `Desktop/testgrow-internet-bank-qa` (или `TestGrow Internet Bank QA`)
-3. В левой панели **Explorer** увидишь структуру:
-
-```
-testgrow-internet-bank-qa/
-├── test-plans/
-├── test-cases/
-├── bug-reports/
-├── screenshots/
-├── test-data/
-├── requirements/
-└── README.md
-```
-
-Это тот же формат, что Sauce Demo: папки + файлы, без сайта и `npm install`.
+1. **Clone repository** → URL: `https://github.com/byTekhno/testgrow-internet-bank-qa`
+2. Local path: `Desktop/testgrow-internet-bank-qa`
+3. Если репозиторий пустой — сначала выполни вариант A (push с Terminal)
 
 ---
 
-## Шаг 4 — Работа с тест-кейсами
+## После настройки
 
-Открой в Excel или Numbers:
-
-```
-test-cases/TestGrow_Internet_Bank_Test_Cases.csv
-```
-
-Колонки **Actual Result** и **Pass/Fail** заполняешь при прохождении симулятора TestGrow.
-
----
-
-## Windows
-
-```powershell
-cd $env:USERPROFILE\Desktop
-git clone https://github.com/andrew-hitch/testgrow-internet-bank-qa.git
-```
-
-Дальше: Cursor → Open Folder → эта папка на Desktop.
+| Действие | Файл |
+|----------|------|
+| Тест-кейсы в Excel | `test-cases/TestGrow_Internet_Bank_Test_Cases.csv` |
+| Тест-план | `test-plans/TestGrow_Internet_Bank_Test_Plan.md` |
+| Шаблон бага | `bug-reports/bug-report-template.md` |
+| ТЗ | `requirements/ibrequirements.docx` |
 
 ---
 
-## Если `git clone` не работает
+## Проверка
 
-- Установи Git: https://git-scm.com/downloads
-- Или используй **GitHub Desktop**: Clone repository → выбери папку Desktop
+На GitHub должны быть видны папки `test-plans`, `test-cases`, `bug-reports`, и т.д.:
 
----
-
-## Текущий облачный репозиторий (до создания GitHub)
-
-Код уже в Cursor Origin:
-
-`andrew-hitch/tmp-1b2f381a38a340bc`
-
-После **Create repo** на GitHub содержимое будет в постоянном репозитории, и шаг 2 даст папку на Desktop.
+https://github.com/byTekhno/testgrow-internet-bank-qa

@@ -1,65 +1,72 @@
-# TestGrow Practice 99 — Тестирование интернет-банка
+# QA Manual Testing Portfolio — TestGrow Internet Bank
 
-Портфолио ручного тестирования модуля **«Интернет Банк»** ({TEST}GROW BANK) по заданию **practice99** платформы [TestGrow](https://testgrow.ru).
+## Project Overview
 
-Раздел курса: **«Написание тестов»** — поиск дефектов в модуле перевода между счетами клиента.
+Ручное тестирование модуля **«Интернет Банк»** ({TEST}GROW BANK) по заданию **practice99** платформы [TestGrow](https://testgrow.ru).
 
-## Что внутри
+Раздел курса: **«Написание тестов»**. Фокус — модуль перевода между счетами клиента, список счетов, детали счета и реквизиты.
 
-| Материал | Описание |
-|----------|----------|
-| `docs/test-plan.md` | Тест-план и стратегия |
-| `docs/bug-report-template.md` | Шаблон баг-репорта для BugTracker |
-| `src/data/test-cases.ts` | 38 тест-кейсов с маппингом на REQ |
-| `test-data/clients.json` | 15 тестовых клиентов (из Google Sheets) |
-| `requirements/ibrequirements.docx` | Техническое задание |
-| `public/screenshots/` | Скриншоты симулятора |
+## Application Under Test
 
-## Веб-портфолио
+| | |
+|---|---|
+| **Application** | {TEST}GROW BANK (симулятор TestGrow) |
+| **Platform** | TestGrow — practice99 |
+| **Type** | Demo internet banking web application |
+| **Documentation** | `requirements/ibrequirements.docx` |
 
-Локальный сайт для демонстрации работы в резюме и на собеседовании:
+## Testing Scope
 
-```bash
-npm install
-npm run dev
+- Авторизация (выбор тестового пользователя)
+- Главное меню и навигация
+- Список счетов (типы, валюты, таблица)
+- Детальная информация по счету и реквизиты
+- Перевод между счетами клиента (лимиты, валидации, сообщения)
+- Регистрация дефектов в BugTracker TestGrow
+
+## Project Structure
+
+```
+├── test-plans/          # Тест-планы
+├── test-cases/           # Тест-кейсы (CSV для Excel)
+├── bug-reports/          # Баг-репорты и чек-лист
+├── screenshots/          # Скриншоты симулятора и дефектов
+├── test-data/            # Тестовые клиенты и счета
+├── requirements/         # Техническое задание
+└── README.md
 ```
 
-Откройте [http://127.0.0.1:43199](http://127.0.0.1:43199).
+## Artifacts
 
-## Задание TestGrow
+| Артефакт | Путь |
+|----------|------|
+| Тест-план | [test-plans/TestGrow_Internet_Bank_Test_Plan.md](test-plans/TestGrow_Internet_Bank_Test_Plan.md) |
+| Тест-кейсы (38) | [test-cases/TestGrow_Internet_Bank_Test_Cases.csv](test-cases/TestGrow_Internet_Bank_Test_Cases.csv) |
+| Шаблон баг-репорта | [bug-reports/bug-report-template.md](bug-reports/bug-report-template.md) |
+| Чек-лист дефектов | [bug-reports/bug-checklist.md](bug-reports/bug-checklist.md) |
+| Тестовые данные | [test-data/](test-data/) |
+| ТЗ | [requirements/ibrequirements.docx](requirements/ibrequirements.docx) |
+| Скриншоты | [screenshots/](screenshots/) |
 
-1. Изучить техническое задание (`ibrequirements.docx`).
-2. Протестировать симулятор {TEST}GROW BANK в личном кабинете TestGrow.
-3. Завести найденные ошибки через **«Создать ошибку»** / **BugTracker**.
-4. Отправить задание на проверку.
+## Test Data (online)
 
-### Тестовые данные
+[Google Sheets — 15 тестовых клиентов](https://docs.google.com/spreadsheets/d/1IUVQV2zzd8spITAgIt0Hfpn0QZOpvq8Ii1rJiAS-sAA/edit?gid=1977293877#gid=1977293877)
 
-- [Google Sheets — тестовые клиенты и счета](https://docs.google.com/spreadsheets/d/1IUVQV2zzd8spITAgIt0Hfpn0QZOpvq8Ii1rJiAS-sAA/edit?gid=1977293877#gid=1977293877)
-- Локальная копия: `test-data/raw.csv`, `test-data/clients.json`
+## How to Use This Portfolio
 
-## Ключевые области тестирования
+1. Открой `test-cases/TestGrow_Internet_Bank_Test_Cases.csv` в Excel или Google Sheets.
+2. Выполни кейсы в симуляторе TestGrow (practice99).
+3. Заполни колонки **Actual Result** и **Pass/Fail**.
+4. Найденные баги — в BugTracker TestGrow и в `bug-reports/` (по шаблону).
+5. Скриншоты дефектов — в `screenshots/`.
+6. Отправь задание на проверку в TestGrow.
 
-- Список счетов (типы, валюты, таблица, переход к деталям)
-- Детальная информация и реквизиты (RUB / валютные счета)
-- Перевод между счетами (лимиты, маска суммы, валидации)
-- Главное меню и навигация
+## Tools
 
-## Лимиты перевода (REQ09)
+- TestGrow BugTracker (встроенный)
+- Google Sheets / Excel (тест-кейсы и тестовые данные)
+- Chrome
 
-| Валюта | Лимит |
-|--------|-------|
-| Рубль | 999 999,99 |
-| Евро | 1 500 |
-| Доллар США | 2 000 |
-| Юань | 12 000 |
-| Швейцарский франк | 1 500 |
+## Author
 
-## Стек
-
-- Next.js 16, TypeScript, Tailwind CSS
-- Документация: Markdown
-
-## Автор
-
-Andrew Hitch — практическое задание TestGrow для портфолио QA.
+Andrew Hitch — QA portfolio project (TestGrow practice99)

@@ -1,4 +1,4 @@
-ID,Module,Requirement,Title,Preconditions,Test Steps,Test Data,Expected Result,Actual Result,Pass/Fail,Priority
+﻿﻿ID,Module,Requirement,Title,Preconditions,Test Steps,Test Data,Expected Result,Actual Result,Pass/Fail,Priority
 TC-001,Авторизация,ИБ-1,Вход в систему через выбор пользователя,Открыт модуль {TEST}GROW BANK,1. Нажать «Войти» | 2. Выбрать пользователя из списка | 3. Подтвердить вход,Тестов Николай Первый,Открывается главное меню модуля интернет-банка,,,High
 TC-002,Меню,REQ10,Пункты главного меню,Клиент авторизован,1. Проверить пункты главного меню,Тестов Николай Первый,Отображаются «Счета» и «Перевод между счетами»,,,High
 TC-003,Меню,REQ11,Переход к списку счетов,Клиент авторизован,1. Выбрать пункт «Счета»,Тестов Николай Первый,Открывается ЭФ «Список счетов»,,,High

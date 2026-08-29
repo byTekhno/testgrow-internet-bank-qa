@@ -33,6 +33,7 @@
 ├── screenshots/          # Скриншоты симулятора и дефектов
 ├── test-data/            # Тестовые клиенты и счета
 ├── requirements/         # Техническое задание
+├── SETUP-DESKTOP.md      # Как склонировать папку на Desktop
 └── README.md
 ```
 

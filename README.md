@@ -59,7 +59,7 @@ https://github.com/byTekhno/testgrow-internet-bank-qa
 
 ## How to Use This Portfolio
 
-**Первый раз:** открой [SETUP-DESKTOP.md](SETUP-DESKTOP.md) — перенос папки на `~/Desktop` и открытие в Cursor.
+**Первый раз (Windows):** открой [SETUP-DESKTOP.md](SETUP-DESKTOP.md) — папка на `Desktop` и открытие в Cursor.
 
 1. Открой `test-cases/TestGrow_Internet_Bank_Test_Cases.csv` в Excel или Google Sheets.
 2. Выполни кейсы в симуляторе TestGrow (practice99).

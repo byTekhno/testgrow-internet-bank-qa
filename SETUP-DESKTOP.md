@@ -1,35 +1,33 @@
-# Настройка на рабочем столе
+# Настройка на рабочем столе (Windows)
 
 Репозиторий на GitHub: **https://github.com/byTekhno/testgrow-internet-bank-qa**
 
-Код проекта собран в Cloud Agent. Перенеси его в свой GitHub **один раз** с Mac — дальше работай как с Sauce Demo.
+Код проекта собран в Cloud Agent. Перенеси его в свой GitHub **один раз** с ноутбука — дальше работай как с Sauce Demo.
 
 ---
 
-## Вариант A — рекомендуется (2 минуты)
+## Вариант A — рекомендуется (PowerShell или CMD)
 
-Открой **Terminal** на Mac и выполни:
+Открой **PowerShell** или **Терминал** в Cursor (**Terminal → New Terminal**) и выполни:
 
-```bash
-cd ~/Desktop
+```powershell
+cd $env:USERPROFILE\Desktop
 git clone https://origin.cursor.com/git/andrew-hitch/tmp-1b2f381a38a340bc.git testgrow-internet-bank-qa
 cd testgrow-internet-bank-qa
 git remote set-url origin https://github.com/byTekhno/testgrow-internet-bank-qa.git
 git push -u origin main
 ```
 
-Если `git push` попросит логин — используй **GitHub Personal Access Token** как пароль (не обычный пароль GitHub).
-
-Папка на Desktop:
+Папка на рабочем столе:
 
 ```
-~/Desktop/testgrow-internet-bank-qa/
+C:\Users\<ТвоёИмя>\Desktop\testgrow-internet-bank-qa\
 ```
 
 ### Открыть в Cursor
 
 1. **File → Open Folder…**
-2. Выбери `Desktop/testgrow-internet-bank-qa`
+2. Выбери `Desktop\testgrow-internet-bank-qa`
 
 В Explorer слева:
 
@@ -44,25 +42,28 @@ requirements/
 
 ---
 
-## Вариант B — если вариант A не клонирует Cursor Origin
+## Вариант B — GitHub Desktop
 
-```bash
-cd ~/Desktop
-git clone https://github.com/byTekhno/testgrow-internet-bank-qa.git
-cd testgrow-internet-bank-qa
-```
+1. Установи [GitHub Desktop](https://desktop.github.com/) (если ещё нет).
+2. **File → Clone repository** → URL: `https://github.com/byTekhno/testgrow-internet-bank-qa`
+3. Local path: `Desktop\testgrow-internet-bank-qa`
 
-Скачай архив с файлами из агента Cursor (если доступен в UI) или попроси агента снова — после пуша с твоей машины репозиторий будет полный.
-
-Либо вручную скопируй структуру из GitHub после успешного `git push` из варианта A.
+Если репозиторий на GitHub **пустой** — сначала выполни **Вариант A** (push из PowerShell), чтобы файлы появились на GitHub.
 
 ---
 
-## Вариант C — GitHub Desktop
+## Если `git` не найден
 
-1. **Clone repository** → URL: `https://github.com/byTekhno/testgrow-internet-bank-qa`
-2. Local path: `Desktop/testgrow-internet-bank-qa`
-3. Если репозиторий пустой — сначала выполни вариант A (push с Terminal)
+Установи Git for Windows: https://git-scm.com/download/win  
+Перезапусти Cursor и снова выполни команды из варианта A.
+
+---
+
+## Если `git push` просит пароль
+
+Используй **GitHub Personal Access Token** как пароль (не пароль аккаунта GitHub):
+
+GitHub → Settings → Developer settings → Personal access tokens
 
 ---
 
@@ -70,15 +71,15 @@ cd testgrow-internet-bank-qa
 
 | Действие | Файл |
 |----------|------|
-| Тест-кейсы в Excel | `test-cases/TestGrow_Internet_Bank_Test_Cases.csv` |
-| Тест-план | `test-plans/TestGrow_Internet_Bank_Test_Plan.md` |
-| Шаблон бага | `bug-reports/bug-report-template.md` |
-| ТЗ | `requirements/ibrequirements.docx` |
+| Тест-кейсы в Excel | `test-cases\TestGrow_Internet_Bank_Test_Cases.csv` |
+| Тест-план | `test-plans\TestGrow_Internet_Bank_Test_Plan.md` |
+| Шаблон бага | `bug-reports\bug-report-template.md` |
+| ТЗ | `requirements\ibrequirements.docx` |
 
 ---
 
 ## Проверка
 
-На GitHub должны быть видны папки `test-plans`, `test-cases`, `bug-reports`, и т.д.:
+На GitHub должны появиться папки `test-plans`, `test-cases`, `bug-reports` и др.:
 
 https://github.com/byTekhno/testgrow-internet-bank-qa

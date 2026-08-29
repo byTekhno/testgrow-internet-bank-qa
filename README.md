@@ -1,4 +1,4 @@
-# QA-портфолио: TestGrow Internet Bank
+# Manual QA portfolio — test plan, cases, test run, bug reports (TestGrow Internet Bank)
 
 Учебный проект ручного тестирования модуля **«Интернет Банк»** ({TEST}GROW BANK) на платформе [TestGrow](https://testgrow.ru) — задание **practice99**.
 

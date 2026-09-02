@@ -19,7 +19,7 @@
 | [test-plans/](test-plans/)                                       | Тест-план                       |
 | [test-cases/](test-cases/)                                       | Тест-кейсы по модулям (38 шт.)  |
 | [test-data/clients.md](test-data/clients.md)                     | 15 клиентов, 121 счёт           |
-| [bug-reports/](bug-reports/)                                     | Баг- репорты                    |
+| [bug-reports/](bug-reports/)                                     | Баг-репорты                     |
 | [test-runs/](test-runs/)                                         | Результаты прогонов (pass/fail) |
 | [screenshots/](screenshots/)                                     | Скриншоты симулятора и дефектов |
 
@@ -36,6 +36,16 @@
 | [05-transfer.md](test-cases/05-transfer.md)               | Перевод между счетами | 25     |
 | [06-regression.md](test-cases/06-regression.md)           | Регресс               | 1      |
 
+
+---
+
+## Что уже сделано
+
+- Пройден смоук: Pass 3 / Fail 2 ([test-runs/2026-08-29.md](test-runs/2026-08-29.md))
+- Выполнен прогон: Pass 22 / Fail 10 / Blocked 3 / Skipped 3 ([test-runs/2026-08-29.md](test-runs/2026-08-29.md))
+- Оформлены дефекты: [BUG-001](bug-reports/BUG-001-savings-no-account-details.md), [BUG-002](bug-reports/BUG-002-transfer-amount-question-marks.md), [BUG-003](bug-reports/BUG-003-same-account-type-transfer-blocked.md), [BUG-004](bug-reports/BUG-004-deposit-account-not-shown.md), [BUG-005](bug-reports/BUG-005-credit-list-no-currency-filter.md), [BUG-006](bug-reports/BUG-006-ruble-limit-boundary-transfer-allowed.md), [BUG-007](bug-reports/BUG-007-ruble-minimum-transfer-1000.md), [BUG-008](bug-reports/BUG-008-negative-amount-button-active.md)
+- Собраны кейсы: авторизация, меню, список счетов, детали счёта, перевод, регресс
+- Зафиксированы ТЗ и тест-план: [requirements/ibrequirements.md](requirements/ibrequirements.md), [test-plans/](test-plans/)
 
 ---
 
